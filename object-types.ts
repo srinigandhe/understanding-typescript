@@ -25,5 +25,21 @@ let complexObj: { data: number[], callback: (flag: boolean) => number[] } = {
         return this.data;
     }
 };
-
 console.log(complexObj);
+
+
+// DEFINING REUSABLE TYPES with the keyword 'type'
+
+type Complex = { data: number[], callback: (flag: boolean) => number[] };
+
+let complexObj2: Complex = {
+    data: [45, 55, 44],
+    callback: function (flag: boolean) {
+        return this.data;
+    }
+};
+
+console.log(complexObj2);
+
+
+

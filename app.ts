@@ -32,3 +32,13 @@ myNewFunc = multiply; // No error;
 
 console.log(myNewFunc(6, 6));
 
+// Union Types
+
+let myRealAge: number | string;
+
+myRealAge = 25;
+console.log(myRealAge);
+myRealAge = '25';
+console.log(myRealAge);
+
+
