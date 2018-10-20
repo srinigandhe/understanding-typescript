@@ -1,0 +1,24 @@
+{
+  "name": "understanding-typescript",
+  "version": "1.0.0",
+  "description": "Understanding typescript",
+  "scripts": {
+    "start": "tsc --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/srinigandhe/understanding-typescript.git"
+  },
+  "keywords": [
+    "typescript"
+  ],
+  "author": "Srini Gandhe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/srinigandhe/understanding-typescript/issues"
+  },
+  "homepage": "https://github.com/srinigandhe/understanding-typescript#readme",
+  "devDependencies": {
+    "typescript": "^3.1.3"
+  }
+}
