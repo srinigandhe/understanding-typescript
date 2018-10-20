@@ -1,23 +1,34 @@
-let arr: [string, number];
+let newName: any = 'Srini';
+let age: number = 35;
+console.log(newName, age);
+function getName(): string {
+    return newName;
+}
+function getAge(): number {
+    return age;
+}
+function doNothing(): void {
+    console.log('Do nothing');
+    // return statement will throw error
+}
+console.log(getName(), getAge());
 
-arr = ['Hello World', 35];
-// arr = [35, 'Hello world']; // Error
-
-enum Color {
-    Grey,
-    Green,
-    Blue,
-    Custom = 100,
-    NewCustom
+function multiply(x: number, y: number): number {
+    return x * y;
 }
 
-let blueColor: Color = Color.Blue;
-let greyColor: Color = Color.Grey;
-let greenColor: Color = Color.Green;
-console.log(blueColor); // 2 => it works like index [0, 1, 2]
-console.log(greyColor); // 0 => it works like index [0, 1, 2]
-console.log(greenColor); // 1 => it works like index [0, 1, 2]
-let customColor: Color = Color.Custom;
-console.log(customColor); // 100
-let newCustomColor: Color = Color.NewCustom;
-console.log(newCustomColor); // iterates from prev. num => 101
+console.log(multiply(5, 4)); // 20
+
+let myFunc; // implicitly ANY type of function
+myFunc = doNothing;
+myFunc(); // Do nothing
+myFunc = multiply;
+console.log(myFunc(5, 5));
+
+let myNewFunc: ((a: number, b: number) => number);
+
+// myNewFunc = doNothing; // Error:(30, 1) TS2322: Type '() => void' is not assignable to type '(a: number, b: number) => number'. Type 'void' is not assignable to type 'number'.
+myNewFunc = multiply; // No error;
+
+console.log(myNewFunc(6, 6));
+
